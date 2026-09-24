@@ -2,15 +2,20 @@
 
 A zero-dependency, client-side simulation laboratory for exploring soil hydrology, micro-climate stress, roots, carbon, and community ecological interventions.
 
-## v0.2: Reproducible Scenario Laboratory
+## v0.3: Living Processes
 
-DBDT v0.2 adds three repeatable scenarios:
+DBDT v0.3 makes model causality visible. The canvas now includes process focus modes, pause/step/speed controls, recent metric deltas, causal event particles, and click-to-inspect local cells.
 
-- **Baseline Garden** — a balanced reference state for comparison.
-- **Heavy Rainfall** — tests infiltration, runoff, and water-retention interventions.
-- **Heat & Drought** — tests deep roots, carbon, and fungal transport under high atmospheric demand.
+### Focus modes
 
-Use the **Scenario Laboratory** controls to select a scenario, reset the simulation, and replay the same seeded climate sequence. Outputs are illustrative model values, not field measurements or agronomic prescriptions.
+- **All processes** — full ecological cross-section.
+- **Water** — infiltration, capillary movement, drainage, and runoff.
+- **Roots** — root biomass and uptake pulses.
+- **Mycelium** — fungal transport network traces.
+- **Carbon** — organic-matter pockets and retention zones.
+- **Runoff** — surface overflow and watershed exits.
+
+The animated marks are linked to model events rather than decorative motion. Outputs remain illustrative model values, not field measurements, forecasts, or agronomic prescriptions.
 
 ## Model contract
 
