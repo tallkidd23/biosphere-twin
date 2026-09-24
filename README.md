@@ -1,44 +1,29 @@
 # Decentralized Biosphere Digital Twin (DBDT)
 
-An open, zero-dependency client-side simulation laboratory modeling micro-climate dynamics, soil hydrology, microbial respiration, and predictive community ecological stewardship.
+A zero-dependency, client-side simulation laboratory for exploring soil hydrology, micro-climate stress, roots, carbon, and community ecological interventions.
 
----
+## v0.2: Reproducible Scenario Laboratory
 
-## Vision & Architecture
+DBDT v0.2 adds three repeatable scenarios:
 
-The **Decentralized Biosphere Digital Twin (DBDT)** provides accessible, real-time ecological modeling for community gardens, local watersheds, and sustainable agriculture. It runs entirely in the browser with no tracking, no server overhead, and complete computational transparency.
+- **Baseline Garden** — a balanced reference state for comparison.
+- **Heavy Rainfall** — tests infiltration, runoff, and water-retention interventions.
+- **Heat & Drought** — tests deep roots, carbon, and fungal transport under high atmospheric demand.
 
-```
-┌────────────────────────────────────────────────────────┐
-│        DECENTRALIZED BIOSPHERE DIGITAL TWIN (DBDT)     │
-└───────────────────────────┬────────────────────────────┘
-                            │
-      ┌─────────────────────┼─────────────────────┐
-      ▼                     ▼                     ▼
-┌─────────────┐       ┌─────────────┐       ┌─────────────┐
-│   LAYER 1   │       │   LAYER 2   │       │   LAYER 3   │
-│ SOIL & WATER│       │ MICROBIAL & │       │ CANOPY &    │
-│  HYDROLOGY  │       │  MYCELIUM   │       │ BIOMASS     │
-└─────────────┘       └─────────────┘       └─────────────┘
-```
+Use the **Scenario Laboratory** controls to select a scenario, reset the simulation, and replay the same seeded climate sequence. Outputs are illustrative model values, not field measurements or agronomic prescriptions.
 
-### Core Simulation Layers
+## Model contract
 
-1. **Hydrological Percolation & Aquifer Model**: Simulates precipitation infiltration, saturation run-off, soil pore capillary action, and subterranean water table recharge.
-2. **Microbial Respiration & Nutrient Mineralization**: Models organic detritus decomposition, nitrogen fixation, and localized mycorrhizal transport.
-3. **Canopy Transpiration & Root Uptake**: Dynamic plant root architectures extracting water and nutrients based on solar irradiance and atmospheric vapor pressure deficit (VPD).
-4. **Predictive Intervention Sandbox**: Stewards can test interventions (introducing cover crops, biochar enrichment, swales, or windbreaks) before planting in the physical world.
+- The model runs locally in the browser; no telemetry or account is required.
+- Water is represented as a bounded cell field. Percolation, runoff, evaporation, and root extraction are tracked in the simulation ledger.
+- Climate values are synthetic scenario parameters, not a weather forecast.
+- Soil organic matter, root density, and mycelium are simplified exploratory state variables.
+- Results should be calibrated against site observations before real-world decisions are made.
 
----
+## Run locally
 
-## Principles
-
-- **Zero-Dependency Vanilla Web Stack**: Pure HTML5, CSS3, and modern Canvas/JavaScript.
-- **Client-Side Autonomy**: All non-linear differential equations and cellular automata run locally on the user's hardware.
-- **Open Civic Access**: Free and unrestricted access for community growers, educators, and ecological researchers.
-
----
+Open `index.html` in a modern browser or publish the repository with GitHub Pages.
 
 ## License
 
-Dedicated to the public domain under CC0 1.0 Universal. Free for educational, community, and scientific stewardship.
+CC0 1.0 Universal. Public domain dedication for educational, community, and scientific stewardship.
