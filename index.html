@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biosphere Twin — Decentralized Ecological Digital Twin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="title-row">
+        <h1>Biosphere Twin</h1>
+        <div class="header-pills">
+          <span class="live-pill"><span class="pulse-dot"></span> DECENTRALIZED TWIN</span>
+        </div>
+      </div>
+      <p class="subtitle">Open client-side micro-climate, soil hydrology, and predictive community ecological simulation.</p>
+    </header>
+
+    <main>
+      <!-- Simulation Canvas -->
+      <div class="canvas-wrapper">
+        <canvas id="sim"></canvas>
+      </div>
+
+      <!-- Micro-Climate & Atmospheric Telemetry Bar -->
+      <div class="telemetry-bar">
+        <div class="telemetry-item">
+          <span class="telemetry-icon" id="climateIcon">⛅</span>
+          <div class="telemetry-meta">
+            <span class="telemetry-label">Atmospheric State</span>
+            <b class="telemetry-val" id="climateName">Temperate Infiltration</b>
+          </div>
+        </div>
+        <div class="telemetry-item stats-item">
+          <span>Precipitation: <b id="precipStat">1.2 mm/hr</b></span>
+          <span>VPD: <b id="vpdStat">0.85 kPa</b></span>
+          <span>Soil Moisture: <b id="soilMoistStat">38%</b></span>
+        </div>
+      </div>
+
+      <!-- Stewardship & Intervention Controls -->
+      <div class="controls-panel">
+        <div class="controls-header">
+          <h2>Stewardship Interventions (Active: <span id="activeToolName">Seed Deep Taproot</span>)</h2>
+          <button class="scope-toggle-btn" id="telemetryToggleBtn">📊 Hydro-Scope</button>
+        </div>
+        <div class="tools-grid">
+          <button class="tool-btn active" data-tool="taproot">🌱 Deep Taproot</button>
+          <button class="tool-btn" data-tool="covercrop">🌿 Cover Crop</button>
+          <button class="tool-btn" data-tool="biochar">🪵 Biochar / Carbon</button>
+          <button class="tool-btn" data-tool="mycelium">🍄 Mycorrhizal Spores</button>
+          <button class="tool-btn" data-tool="swale">💧 Construct Swale</button>
+        </div>
+      </div>
+
+      <!-- Hydro-Scope Telemetry Panel -->
+      <div class="scope-panel" id="scopePanel">
+        <div class="scope-header">
+          <h3>📊 Hydro-Ecological Telemetry</h3>
+          <span class="scope-badge">LIVE ODE KERNEL</span>
+        </div>
+        <div class="scope-metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">Water Table Depth</span>
+            <span class="metric-value" id="scopeWaterTable">1.42 m</span>
+            <div class="metric-bar-bg"><div class="metric-bar-fill blue" id="barWaterTable" style="width: 60%"></div></div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Soil Infiltration Rate</span>
+            <span class="metric-value" id="scopeInfiltration">14.8 mm/h</span>
+            <div class="metric-bar-bg"><div class="metric-bar-fill cyan" id="barInfiltration" style="width: 45%"></div></div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Mycelial Transport Network</span>
+            <span class="metric-value" id="scopeMycelium">0 Nodes</span>
+            <div class="metric-bar-bg"><div class="metric-bar-fill purple" id="barMycelium" style="width: 10%"></div></div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Carbon Storage & Organic Matter</span>
+            <span class="metric-value" id="scopeCarbon">4.2% SOM</span>
+            <div class="metric-bar-bg"><div class="metric-bar-fill green" id="barCarbon" style="width: 42%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Hydrology & Biomass Timeseries -->
+      <div class="graph-panel">
+        <div class="graph-header">
+          <h2>Predictive Hydrology & Biomass Dynamics</h2>
+          <div class="legend">
+            <span class="legend-item"><span class="legend-dot dot-moisture"></span> Soil Moisture</span>
+            <span class="legend-item"><span class="legend-dot dot-biomass"></span> Root Biomass</span>
+            <span class="legend-item"><span class="legend-dot dot-table"></span> Aquifer Level</span>
+          </div>
+        </div>
+        <canvas id="graphCanvas"></canvas>
+      </div>
+
+      <!-- Live Civic Chronicle Log -->
+      <div class="chronicle-panel">
+        <div class="chronicle-header">
+          <h2>Ecological Event Ledger</h2>
+          <span class="epoch-badge" id="epochBadge">Day 1</span>
+        </div>
+        <div class="log-terminal" id="logTerminal"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Decentralized Biosphere Digital Twin (DBDT) v0.1 &middot; Open-source client-side ecological modeling &middot; CC0 Public Domain</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
